@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './StoreFront.css';
 import { connect } from 'react-redux';
-import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
+import { addToShoppingCart, getProducts } from '../../redux/reducer';
 
 class StoreFront extends Component {
 
     componentDidMount() {
-        this.props.getAllProducts();
+        this.props.getProducts();
     }
 
     render() {
@@ -37,4 +37,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {addToShoppingCart, getAllProducts})(StoreFront);
+export default connect(mapStateToProps, {addToShoppingCart, getProducts})(StoreFront);
